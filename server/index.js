@@ -1,9 +1,12 @@
 import dotenv from "dotenv"
 import express from "express"
+import siteRoutes from "./routes/index.routes.js"
 
 dotenv.config()
 
 const app = express()
+
+siteRoutes(app)
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () => {
