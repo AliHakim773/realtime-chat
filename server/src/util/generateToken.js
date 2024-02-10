@@ -6,7 +6,7 @@ const generateToken = (user) => {
     expiresIn: "15d",
   })
 
-  return token
+  return [token, userDetails]
 }
 
 export default generateToken
